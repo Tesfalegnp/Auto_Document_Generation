@@ -1,0 +1,14 @@
+# requirements.txt
+
+python-dotenv>=1.0.0
+google-genai>=0.8.0
+networkx>=3.0
+node2vec>=0.4.3
+gensim>=4.0.0
+rdflib>=6.0.0
+
+# Add any parser-specific deps you already have, e.g.:
+
+# tree_sitter>=0.2.3
+
+# any other libs used by your galaxy_ast_docs
