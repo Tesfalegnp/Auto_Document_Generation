@@ -1,0 +1,329 @@
+{
+  "name": "trace",
+  "path": "/home/hope/Project_package/Tries/trace",
+  "type": "folder",
+  "children": [
+    {
+      "name": "LICENSE",
+      "path": "/home/hope/Project_package/Tries/trace/LICENSE",
+      "type": "file"
+    },
+    {
+      "name": "README.md",
+      "path": "/home/hope/Project_package/Tries/trace/README.md",
+      "type": "file"
+    },
+    {
+      "name": "data",
+      "path": "/home/hope/Project_package/Tries/trace/data",
+      "type": "folder",
+      "children": []
+    },
+    {
+      "name": "notebook_test.ipynb",
+      "path": "/home/hope/Project_package/Tries/trace/notebook_test.ipynb",
+      "type": "file"
+    },
+    {
+      "name": "requirements.txt",
+      "path": "/home/hope/Project_package/Tries/trace/requirements.txt",
+      "type": "file"
+    },
+    {
+      "name": "src",
+      "path": "/home/hope/Project_package/Tries/trace/src",
+      "type": "folder",
+      "children": [
+        {
+          "name": "__pycache__",
+          "path": "/home/hope/Project_package/Tries/trace/src/__pycache__",
+          "type": "folder",
+          "children": [
+            {
+              "name": "hebbian.cpython-312.pyc",
+              "path": "/home/hope/Project_package/Tries/trace/src/__pycache__/hebbian.cpython-312.pyc",
+              "type": "file"
+            },
+            {
+              "name": "model.cpython-312.pyc",
+              "path": "/home/hope/Project_package/Tries/trace/src/__pycache__/model.cpython-312.pyc",
+              "type": "file"
+            },
+            {
+              "name": "trainer.cpython-312.pyc",
+              "path": "/home/hope/Project_package/Tries/trace/src/__pycache__/trainer.cpython-312.pyc",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "hebbian.py",
+          "path": "/home/hope/Project_package/Tries/trace/src/hebbian.py",
+          "type": "file",
+          "language": "python",
+          "definitions": {
+            "classes": [],
+            "functions": [
+              {
+                "name": "hebbian_update_linear",
+                "line": 4,
+                "variables": [
+                  "delta"
+                ],
+                "num_lines": 11
+              },
+              {
+                "name": "oja_rule",
+                "line": 16,
+                "variables": [
+                  "activation",
+                  "forgetting",
+                  "delta"
+                ],
+                "num_lines": 10
+              },
+              {
+                "name": "update_pc_weights_hebbian",
+                "line": 27,
+                "variables": [
+                  "r",
+                  "pred_input"
+                ],
+                "num_lines": 18
+              }
+            ]
+          },
+          "parser_type": "tree_sitter"
+        },
+        {
+          "name": "model.py",
+          "path": "/home/hope/Project_package/Tries/trace/src/model.py",
+          "type": "file",
+          "language": "python",
+          "definitions": {
+            "classes": [
+              {
+                "type": "class",
+                "name": "PredictiveCodingLayer",
+                "line": 6,
+                "functions": [
+                  {
+                    "name": "__init__",
+                    "line": 13,
+                    "variables": [
+                      "self.in_features",
+                      "self.out_features",
+                      "self.W_ff",
+                      "self.W_fb",
+                      "self.e_ff"
+                    ],
+                    "num_lines": 12
+                  },
+                  {
+                    "name": "init_state",
+                    "line": 26,
+                    "variables": [
+                      "self.r"
+                    ],
+                    "num_lines": 4
+                  },
+                  {
+                    "name": "forward",
+                    "line": 31,
+                    "variables": [
+                      "device",
+                      "batch_size",
+                      "r",
+                      "pred_ff",
+                      "self.e_ff"
+                    ],
+                    "num_lines": 19
+                  },
+                  {
+                    "name": "update_r",
+                    "line": 51,
+                    "variables": [
+                      "r",
+                      "pred_ff",
+                      "grad_sigmoid",
+                      "error_signal",
+                      "grad",
+                      "self.r"
+                    ],
+                    "num_lines": 9
+                  },
+                  {
+                    "name": "get_representation",
+                    "line": 61,
+                    "variables": [],
+                    "num_lines": 2
+                  }
+                ]
+              },
+              {
+                "type": "class",
+                "name": "PredictiveCodingNetwork",
+                "line": 65,
+                "functions": [
+                  {
+                    "name": "__init__",
+                    "line": 70,
+                    "variables": [
+                      "self.input_size",
+                      "self.hidden_sizes",
+                      "self.num_classes",
+                      "layer_sizes",
+                      "self.layers",
+                      "self.classifier"
+                    ],
+                    "num_lines": 17
+                  },
+                  {
+                    "name": "forward",
+                    "line": 88,
+                    "variables": [
+                      "x",
+                      "x_detached",
+                      "errors",
+                      "h",
+                      "r_next",
+                      "e",
+                      "h",
+                      "total_error",
+                      "final_r",
+                      "logits"
+                    ],
+                    "num_lines": 30
+                  }
+                ]
+              }
+            ],
+            "functions": []
+          },
+          "parser_type": "tree_sitter"
+        },
+        {
+          "name": "train.py",
+          "path": "/home/hope/Project_package/Tries/trace/src/train.py",
+          "type": "file",
+          "language": "python",
+          "definitions": {
+            "classes": [],
+            "functions": [
+              {
+                "name": "main",
+                "line": 10,
+                "variables": [
+                  "device",
+                  "transform",
+                  "train_dataset",
+                  "val_dataset",
+                  "train_loader",
+                  "val_loader",
+                  "model",
+                  "optimizer",
+                  "n_epochs",
+                  "history",
+                  "train_metrics",
+                  "val_metrics"
+                ],
+                "num_lines": 56
+              }
+            ]
+          },
+          "parser_type": "tree_sitter"
+        },
+        {
+          "name": "trainer.py",
+          "path": "/home/hope/Project_package/Tries/trace/src/trainer.py",
+          "type": "file",
+          "language": "python",
+          "definitions": {
+            "classes": [],
+            "functions": [
+              {
+                "name": "train_epoch",
+                "line": 10,
+                "variables": [
+                  "total_loss, total_pc_loss",
+                  "correct, count",
+                  "x, y",
+                  "logits, pc_error",
+                  "cls_criterion",
+                  "cls_loss",
+                  "loss"
+                ],
+                "num_lines": 33
+              },
+              {
+                "name": "validate_epoch",
+                "line": 44,
+                "variables": [
+                  "correct, count",
+                  "total_pc_loss",
+                  "x, y",
+                  "logits, pc_error"
+                ],
+                "num_lines": 19
+              }
+            ]
+          },
+          "parser_type": "tree_sitter"
+        }
+      ]
+    },
+    {
+      "name": "utils",
+      "path": "/home/hope/Project_package/Tries/trace/utils",
+      "type": "folder",
+      "children": [
+        {
+          "name": "__pycache__",
+          "path": "/home/hope/Project_package/Tries/trace/utils/__pycache__",
+          "type": "folder",
+          "children": [
+            {
+              "name": "visualize.cpython-312.pyc",
+              "path": "/home/hope/Project_package/Tries/trace/utils/__pycache__/visualize.cpython-312.pyc",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "visualize.py",
+          "path": "/home/hope/Project_package/Tries/trace/utils/visualize.py",
+          "type": "file",
+          "language": "python",
+          "definitions": {
+            "classes": [],
+            "functions": [
+              {
+                "name": "plot_metrics",
+                "line": 5,
+                "variables": [
+                  "epochs"
+                ],
+                "num_lines": 33
+              },
+              {
+                "name": "plot_sample_predictions",
+                "line": 40,
+                "variables": [
+                  "samples",
+                  "x, y",
+                  "logits, _",
+                  "preds",
+                  "indices",
+                  "fig, axes",
+                  "ax"
+                ],
+                "num_lines": 44
+              }
+            ]
+          },
+          "parser_type": "tree_sitter"
+        }
+      ]
+    }
+  ]
+}
