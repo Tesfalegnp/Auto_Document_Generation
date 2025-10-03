@@ -1,37 +1,34 @@
-# Title: {{Project Title}}
+# Project Documentation
 
-# Short description (1-2 lines):
+You are an expert software architect and technical writer. Generate a comprehensive, developer-friendly README in Markdown using the provided AST summary.
 
-# High-level Architecture:
+## Requirements
 
-# - Inputs: e.g. directory path -> AST JSON
+For **each notable source file** (especially .py, .js, .rs, .java, .metta, etc.), include:
 
-# - Processing steps: walker -> parser_layer -> traversal_layer -> output_layer
+- **File path**
+- **General purpose**: What problem does this file solve? Why does it exist?
+- **Key classes**: List class names and a 1-sentence role for each.
+- **Key functions**: List top-level or exported functions and their purpose.
+- **Important variables/constants**: If they control behavior, config, or state.
+- **Dependencies/imports**: Only if they reveal architectural intent.
 
-# - Outputs: docs/ast_summary.json, docs/ast_graph.graphml, docs/ast_embeddings.json
+Also include:
 
-# Installation:
+- A **Project Overview** section explaining the system’s goal.
+- A **Project Structure** tree (top-level dirs + 1-line descriptions).
+- **How to reproduce**: Exact commands to regenerate this doc.
+- **Assumptions**: What the parser inferred (e.g., “detected Python + MeTTa”).
 
-# - pip install -r requirements.txt
+## Style Rules
 
-# Quickstart:
+- Use clear headings (`## File: src/core/engine.py`)
+- Use bullet points for lists
+- Wrap code/commands in ```bash or ```python
+- **Do not hallucinate** — only describe what’s in the AST summary.
+- If a file has no functions/classes, skip deep analysis.
+- Prioritize clarity over length.
 
-# - python -m galaxy_ast_docs.generate_ast_docs --root /path/to/repo --output docs/ast_summary.json
+## Output Format
 
-# - python llm/generate_readme.py --json docs/ast_summary.json --out README_docs.md
-
-# Example usage and CLI commands:
-
-# - Show typical commands and expected outputs
-
-# Notes:
-
-# - Tell where to put the GEMINI_API_KEY (use .env)
-
-# - Mention limitations (large JSON chunking)
-
-# Next steps & enhancements:
-
-# - Add CI to generate docs automatically
-
-# - Add tests and more robust error handling
+Return ONLY valid Markdown. Start with `# Project Documentation`, no intro text.
