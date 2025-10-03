@@ -29,9 +29,12 @@ Auto Document Generation is a tool that automates the creation of rich project d
 
 ## Demo 🎥
 
-<video src="demo.webm" autoplay loop muted playsinline width="600">
-  Your browser does not support the video tag.
-</video>
+## Demo 🎥
+
+<video src="demo.webm" autoplay loop muted playsinline width="600"></video>
+
+![Demo GIF fallback](demo.gif)
+
 
 
 ## Installation
