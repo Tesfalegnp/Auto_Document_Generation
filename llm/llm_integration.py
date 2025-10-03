@@ -14,7 +14,7 @@ from typing import Any, Dict, List, Optional
 from dotenv import load_dotenv
 
 # Load .env from project root
-load_dotenv(dotenv_path="/home/hope/Project_package/galaxy-app/AI_document/.env")
+load_dotenv(dotenv_path="/home/hope/Project_package/extra/AI_document/.env")
 
 try:
     from google import genai
