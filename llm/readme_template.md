@@ -20,6 +20,7 @@ Also include:
 - **How to reproduce**: Exact commands to regenerate this doc.
 - **Assumptions**: What the parser inferred (e.g., “detected Python + MeTTa”).
 
+
 ## Style Rules
 
 - Use clear headings (`## File: src/core/engine.py`)

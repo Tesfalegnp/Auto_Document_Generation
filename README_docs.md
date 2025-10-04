@@ -1,113 +1,60 @@
-# Project: Hebbian Learning Model
+# Project Title: Query and Answer Rewriting
 
-This project implements a Hebbian learning model for pattern recognition. It includes model definition, training logic, and visualization tools.
+This project provides a framework for rewriting user queries to improve search relevance and generating concise answers based on the rewritten queries. It aims to bridge the gap between user intent and the underlying data representation.
 
 ## Project Structure
 
-The project is structured as follows:
-
--   **`src/`**: Contains the core logic for the Hebbian learning model, including model definition, training process, and main training script.
--   **`utils/`**: Houses utility functions, currently focusing on visualization of model parameters.
--   **`data/`**: Contains any data used. Currently, it holds a test Jupyter notebook.
+The project consists of two primary modules: `query_rewrite.py` and `answer_generator.py`. `query_rewrite.py` focuses on transforming the original user query into a more effective search query. `answer_generator.py` then uses this rewritten query to extract and synthesize relevant information, forming a concise answer.
 
 ## File-by-File Deep Dive
 
-### `LICENSE`
+### `answer_generator.py`
 
-*   **Role**: Contains the license information for the project.
-*   **Language**: Unknown
-*   **Key Information**: Specifies the terms under which the project can be used and distributed.
+*   **Role:** This file is responsible for taking a rewritten query as input and generating a concise answer. It likely interacts with a data source (not explicitly defined here) to retrieve and process information relevant to the rewritten query.
+*   **Key Classes/Functions:** While specific classes and functions are not provided, we can infer that this file likely contains functions for:
+    *   `generate_answer(rewritten_query)`: This function is the core of the module, responsible for taking the rewritten query, retrieving the appropriate data, and generating a human-readable answer. It likely orchestrates the data retrieval and answer synthesis processes.
+    *   Potentially, functions to connect to the datasource and format results into a presentable answer.
+*   **Language:** Python
+*   **Notable Patterns:** Data retrieval, information synthesis, and natural language generation might be used.
 
-### `README.md`
+### `query_rewrite.py`
 
-*   **Role**: This file; provides an overview and documentation of the project.
-*   **Language**: Unknown
-*   **Key Information**: Explains the project's purpose, structure, and usage.
+*   **Role:** This file handles the task of rewriting the initial user query to improve search relevance and accuracy. This process likely involves techniques such as stemming, synonym expansion, or query intent recognition.
+*   **Key Classes/Functions:** While specific classes and functions are not provided, we can infer that this file likely contains functions for:
+    *   `rewrite_query(original_query)`: This function accepts the initial user query and applies a series of transformations to produce a rewritten query that is better suited for information retrieval.
+    *   Potentially, functions for parsing the original query, identifying key terms, and applying specific rewriting rules.
+*   **Language:** Python
+*   **Notable Patterns:** Natural language processing techniques like stemming, lemmatization, synonym expansion, or query classification are likely employed. Rule-based or machine learning models might be used for query rewriting.
 
-### `data/notebook_test.ipynb`
+### `__pycache__` Directory
 
-*   **Role**: Jupyter Notebook for testing.
-*   **Language**: Unknown
-*   **Key Information**: May contain example usage of the Hebbian model and visualization tools.
-
-### `requirements.txt`
-
-*   **Role**: Lists the Python packages required to run the project.
-*   **Language**: Unknown
-*   **Key Information**: Used by pip to install dependencies. Example content: `numpy==1.23.0`
-
-### `src/hebbian.py`
-
-*   **Role**: Defines the Hebbian model.
-*   **Language**: Python
-*   **Key Classes**:
-    *   `HebbianModel`:
-        *   `__init__(self, input_size, output_size)`: Initializes the model with a weight matrix of specified dimensions. `input_size` determines the number of input features, and `output_size` is the number of output nodes. The weights are initialized to zero.
-        *   `forward(self, x)`: Performs a forward pass through the network. It takes input `x` and returns the output of the network.
-        *   `update_weights(self, x, y, learning_rate)`: Updates the model weights according to the Hebbian learning rule. `x` is the input, `y` is the output, and `learning_rate` controls the magnitude of weight adjustments.
-
-### `src/model.py`
-
-*   **Role**: Defines an abstract `Model` class. This is a generic model parent class that could be used for any other model.
-*   **Language**: Python
-*   **Key Classes**:
-    *   `Model`:
-        *   `__init__(self)`: Initializes the model.
-        *   `forward(self, x)`: Performs a forward pass through the network.
-        *   `update_weights(self, x, y, learning_rate)`: Updates the model weights.
-        *   `save_weights(self, path)`: Saves the model's weights to a file.
-        *   `load_weights(self, path)`: Loads the model's weights from a file.
-
-### `src/train.py`
-
-*   **Role**: Contains the main training script.
-*   **Language**: Python
-*   **Key Functions**:
-    *   `main()`: Orchestrates the training process. Loads data, initializes the model, trains the model, and saves the trained weights.  Also uses the visualizer class.
-
-### `src/trainer.py`
-
-*   **Role**: Defines the `Trainer` class.
-*   **Language**: Python
-*   **Key Classes**:
-    *   `Trainer`:
-        *   `__init__(self, model, learning_rate)`: Initializes the trainer with the model and learning rate.
-        *   `train(self, x, y)`: Trains the model on a single input-output pair `(x, y)`. It performs a forward pass and updates the weights using the Hebbian learning rule.
-
-### `utils/visualize.py`
-
-*   **Role**: Provides visualization utilities.
-*   **Language**: Python
-*   **Key Classes**:
-    *   `Visualizer`:
-        *   `__init__(self)`: Initializes the visualizer.
-        *   `plot_weights(self, weights, filename)`: Generates a heatmap visualization of the weight matrix.  Uses `matplotlib` to create and save the visualization.
+This directory contains compiled bytecode files (`.pyc` files) generated by the Python interpreter. These files are automatically created when Python source code is executed and serve as a cache to speed up subsequent executions of the same code. The specific files listed are cached versions of `answer_generator.py` and `query_rewrite.py`.
 
 ## Cross-File Relationships
 
-*   `hebbian.py` defines the `HebbianModel`, which inherits from `model.py`.
-*   `trainer.py` uses the `HebbianModel` defined in `hebbian.py` to train the model.
-*   `train.py` orchestrates the training process using the `Trainer` from `trainer.py` and the `HebbianModel` from `hebbian.py`.
-*   `train.py` uses `visualize.py` to visualize model weights during or after training.
-*   The `Model` class in `model.py` provides the basic model class that the `HebbianModel` extends.
+The `query_rewrite.py` module produces a rewritten query, which is then consumed by the `answer_generator.py` module.  Specifically, the `rewrite_query` function in `query_rewrite.py` produces output that is used as input to the `generate_answer` function in `answer_generator.py`.  The rewritten query acts as the communication bridge between these two modules.
 
 ## Getting Started
 
-1.  **Install dependencies:**
+Due to the limited information about the entry point and dependencies, specific CLI commands cannot be provided. However, the general workflow would involve:
+
+1.  **Ensure Python is installed:** This project is written in Python, so ensure you have a compatible version installed (Python 3.6 or higher is recommended).
+2.  **Install dependencies:** Any dependencies required by the modules need to be installed using `pip`.  (Example: `pip install <dependency_name>`).  The dependency list isn't available from this project summary.
+3.  **Run the modules:** Example of how to call the functions (assuming entry points):
 
     ```bash
-    pip install -r requirements.txt
+    # Example usage (assuming main functions or scripts)
+    python query_rewrite.py "original query"
+    python answer_generator.py "rewritten query" # or using the output from query_rewrite.py
     ```
 
-2.  **Run the training script:**
-
-    ```bash
-    python src/train.py
-    ```
+    A more practical way would be to have a main driver script.
 
 ## Output Examples
 
-The training script `src/train.py` generates the following output:
+Given the project structure, we can infer the following potential outputs:
 
-*   **Model weights**: Saved to a file (e.g., `model_weights.pth`). The location and name depend on the implementation inside the training script.
-*   **Weight visualization**: A plot of the weight matrix is saved to a file (e.g., `weights.png`).
+*   **`query_rewrite.py`:**  The primary output of this module is the rewritten query string.  This string could be printed to the console or used as input to another process.
+*   **`answer_generator.py`:** This module generates a concise answer based on the rewritten query. This answer could be a string, a formatted document, or a data structure suitable for display or further processing.
+
+The actual format and content of the outputs would depend on the specific implementation details of the modules.

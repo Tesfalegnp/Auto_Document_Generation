@@ -4,254 +4,72 @@
   <key id="d1" for="node" attr.name="name" attr.type="string" />
   <key id="d0" for="node" attr.name="type" attr.type="string" />
   <graph edgedefault="directed">
-    <node id="/home/hope/Project_package/Tries/trace">
+    <node id="/home/hope/Project_package/GraphRag-System/llm_processing">
       <data key="d0">folder</data>
-      <data key="d1">trace</data>
+      <data key="d1">llm_processing</data>
     </node>
-    <node id="/home/hope/Project_package/Tries/trace/LICENSE">
-      <data key="d0">file</data>
-      <data key="d1">LICENSE</data>
-    </node>
-    <node id="/home/hope/Project_package/Tries/trace/README.md">
-      <data key="d0">file</data>
-      <data key="d1">README.md</data>
-    </node>
-    <node id="/home/hope/Project_package/Tries/trace/data">
-      <data key="d0">folder</data>
-      <data key="d1">data</data>
-    </node>
-    <node id="/home/hope/Project_package/Tries/trace/notebook_test.ipynb">
-      <data key="d0">file</data>
-      <data key="d1">notebook_test.ipynb</data>
-    </node>
-    <node id="/home/hope/Project_package/Tries/trace/requirements.txt">
-      <data key="d0">file</data>
-      <data key="d1">requirements.txt</data>
-    </node>
-    <node id="/home/hope/Project_package/Tries/trace/src">
-      <data key="d0">folder</data>
-      <data key="d1">src</data>
-    </node>
-    <node id="/home/hope/Project_package/Tries/trace/src/__pycache__">
+    <node id="/home/hope/Project_package/GraphRag-System/llm_processing/__pycache__">
       <data key="d0">folder</data>
       <data key="d1">__pycache__</data>
     </node>
-    <node id="/home/hope/Project_package/Tries/trace/src/__pycache__/hebbian.cpython-312.pyc">
+    <node id="/home/hope/Project_package/GraphRag-System/llm_processing/__pycache__/answer_generator.cpython-312.pyc">
       <data key="d0">file</data>
-      <data key="d1">hebbian.cpython-312.pyc</data>
+      <data key="d1">answer_generator.cpython-312.pyc</data>
     </node>
-    <node id="/home/hope/Project_package/Tries/trace/src/__pycache__/model.cpython-312.pyc">
+    <node id="/home/hope/Project_package/GraphRag-System/llm_processing/__pycache__/query_rewrite.cpython-312.pyc">
       <data key="d0">file</data>
-      <data key="d1">model.cpython-312.pyc</data>
+      <data key="d1">query_rewrite.cpython-312.pyc</data>
     </node>
-    <node id="/home/hope/Project_package/Tries/trace/src/__pycache__/trainer.cpython-312.pyc">
+    <node id="/home/hope/Project_package/GraphRag-System/llm_processing/answer_generator.py">
       <data key="d0">file</data>
-      <data key="d1">trainer.cpython-312.pyc</data>
+      <data key="d1">answer_generator.py</data>
     </node>
-    <node id="/home/hope/Project_package/Tries/trace/src/hebbian.py">
-      <data key="d0">file</data>
-      <data key="d1">hebbian.py</data>
-    </node>
-    <node id="/home/hope/Project_package/Tries/trace/src/hebbian.py:hebbian_update_linear">
-      <data key="d0">function</data>
-      <data key="d1">hebbian_update_linear</data>
-    </node>
-    <node id="/home/hope/Project_package/Tries/trace/src/hebbian.py:oja_rule">
-      <data key="d0">function</data>
-      <data key="d1">oja_rule</data>
-    </node>
-    <node id="/home/hope/Project_package/Tries/trace/src/hebbian.py:update_pc_weights_hebbian">
-      <data key="d0">function</data>
-      <data key="d1">update_pc_weights_hebbian</data>
-    </node>
-    <node id="/home/hope/Project_package/Tries/trace/src/model.py">
-      <data key="d0">file</data>
-      <data key="d1">model.py</data>
-    </node>
-    <node id="/home/hope/Project_package/Tries/trace/src/model.py:PredictiveCodingLayer">
+    <node id="/home/hope/Project_package/GraphRag-System/llm_processing/answer_generator.py:AnswerGenerator">
       <data key="d0">class</data>
-      <data key="d1">PredictiveCodingLayer</data>
+      <data key="d1">AnswerGenerator</data>
     </node>
-    <node id="/home/hope/Project_package/Tries/trace/src/model.py:PredictiveCodingLayer:__init__">
+    <node id="/home/hope/Project_package/GraphRag-System/llm_processing/answer_generator.py:AnswerGenerator:generate_answer">
       <data key="d0">function</data>
-      <data key="d1">__init__</data>
+      <data key="d1">generate_answer</data>
     </node>
-    <node id="/home/hope/Project_package/Tries/trace/src/model.py:PredictiveCodingLayer:init_state">
-      <data key="d0">function</data>
-      <data key="d1">init_state</data>
+    <node id="/home/hope/Project_package/GraphRag-System/llm_processing/query_rewrite.py">
+      <data key="d0">file</data>
+      <data key="d1">query_rewrite.py</data>
     </node>
-    <node id="/home/hope/Project_package/Tries/trace/src/model.py:PredictiveCodingLayer:forward">
-      <data key="d0">function</data>
-      <data key="d1">forward</data>
-    </node>
-    <node id="/home/hope/Project_package/Tries/trace/src/model.py:PredictiveCodingLayer:update_r">
-      <data key="d0">function</data>
-      <data key="d1">update_r</data>
-    </node>
-    <node id="/home/hope/Project_package/Tries/trace/src/model.py:PredictiveCodingLayer:get_representation">
-      <data key="d0">function</data>
-      <data key="d1">get_representation</data>
-    </node>
-    <node id="/home/hope/Project_package/Tries/trace/src/model.py:PredictiveCodingNetwork">
+    <node id="/home/hope/Project_package/GraphRag-System/llm_processing/query_rewrite.py:QueryRewriter">
       <data key="d0">class</data>
-      <data key="d1">PredictiveCodingNetwork</data>
+      <data key="d1">QueryRewriter</data>
     </node>
-    <node id="/home/hope/Project_package/Tries/trace/src/model.py:PredictiveCodingNetwork:__init__">
+    <node id="/home/hope/Project_package/GraphRag-System/llm_processing/query_rewrite.py:QueryRewriter:rewrite_query">
       <data key="d0">function</data>
-      <data key="d1">__init__</data>
+      <data key="d1">rewrite_query</data>
     </node>
-    <node id="/home/hope/Project_package/Tries/trace/src/model.py:PredictiveCodingNetwork:forward">
-      <data key="d0">function</data>
-      <data key="d1">forward</data>
-    </node>
-    <node id="/home/hope/Project_package/Tries/trace/src/train.py">
-      <data key="d0">file</data>
-      <data key="d1">train.py</data>
-    </node>
-    <node id="/home/hope/Project_package/Tries/trace/src/train.py:main">
-      <data key="d0">function</data>
-      <data key="d1">main</data>
-    </node>
-    <node id="/home/hope/Project_package/Tries/trace/src/trainer.py">
-      <data key="d0">file</data>
-      <data key="d1">trainer.py</data>
-    </node>
-    <node id="/home/hope/Project_package/Tries/trace/src/trainer.py:train_epoch">
-      <data key="d0">function</data>
-      <data key="d1">train_epoch</data>
-    </node>
-    <node id="/home/hope/Project_package/Tries/trace/src/trainer.py:validate_epoch">
-      <data key="d0">function</data>
-      <data key="d1">validate_epoch</data>
-    </node>
-    <node id="/home/hope/Project_package/Tries/trace/utils">
-      <data key="d0">folder</data>
-      <data key="d1">utils</data>
-    </node>
-    <node id="/home/hope/Project_package/Tries/trace/utils/__pycache__">
-      <data key="d0">folder</data>
-      <data key="d1">__pycache__</data>
-    </node>
-    <node id="/home/hope/Project_package/Tries/trace/utils/__pycache__/visualize.cpython-312.pyc">
-      <data key="d0">file</data>
-      <data key="d1">visualize.cpython-312.pyc</data>
-    </node>
-    <node id="/home/hope/Project_package/Tries/trace/utils/visualize.py">
-      <data key="d0">file</data>
-      <data key="d1">visualize.py</data>
-    </node>
-    <node id="/home/hope/Project_package/Tries/trace/utils/visualize.py:plot_metrics">
-      <data key="d0">function</data>
-      <data key="d1">plot_metrics</data>
-    </node>
-    <node id="/home/hope/Project_package/Tries/trace/utils/visualize.py:plot_sample_predictions">
-      <data key="d0">function</data>
-      <data key="d1">plot_sample_predictions</data>
-    </node>
-    <edge source="/home/hope/Project_package/Tries/trace" target="/home/hope/Project_package/Tries/trace/LICENSE">
+    <edge source="/home/hope/Project_package/GraphRag-System/llm_processing" target="/home/hope/Project_package/GraphRag-System/llm_processing/__pycache__">
       <data key="d2">contains</data>
     </edge>
-    <edge source="/home/hope/Project_package/Tries/trace" target="/home/hope/Project_package/Tries/trace/README.md">
+    <edge source="/home/hope/Project_package/GraphRag-System/llm_processing" target="/home/hope/Project_package/GraphRag-System/llm_processing/answer_generator.py">
       <data key="d2">contains</data>
     </edge>
-    <edge source="/home/hope/Project_package/Tries/trace" target="/home/hope/Project_package/Tries/trace/data">
+    <edge source="/home/hope/Project_package/GraphRag-System/llm_processing" target="/home/hope/Project_package/GraphRag-System/llm_processing/query_rewrite.py">
       <data key="d2">contains</data>
     </edge>
-    <edge source="/home/hope/Project_package/Tries/trace" target="/home/hope/Project_package/Tries/trace/notebook_test.ipynb">
+    <edge source="/home/hope/Project_package/GraphRag-System/llm_processing/__pycache__" target="/home/hope/Project_package/GraphRag-System/llm_processing/__pycache__/answer_generator.cpython-312.pyc">
       <data key="d2">contains</data>
     </edge>
-    <edge source="/home/hope/Project_package/Tries/trace" target="/home/hope/Project_package/Tries/trace/requirements.txt">
+    <edge source="/home/hope/Project_package/GraphRag-System/llm_processing/__pycache__" target="/home/hope/Project_package/GraphRag-System/llm_processing/__pycache__/query_rewrite.cpython-312.pyc">
       <data key="d2">contains</data>
     </edge>
-    <edge source="/home/hope/Project_package/Tries/trace" target="/home/hope/Project_package/Tries/trace/src">
-      <data key="d2">contains</data>
-    </edge>
-    <edge source="/home/hope/Project_package/Tries/trace" target="/home/hope/Project_package/Tries/trace/utils">
-      <data key="d2">contains</data>
-    </edge>
-    <edge source="/home/hope/Project_package/Tries/trace/src" target="/home/hope/Project_package/Tries/trace/src/__pycache__">
-      <data key="d2">contains</data>
-    </edge>
-    <edge source="/home/hope/Project_package/Tries/trace/src" target="/home/hope/Project_package/Tries/trace/src/hebbian.py">
-      <data key="d2">contains</data>
-    </edge>
-    <edge source="/home/hope/Project_package/Tries/trace/src" target="/home/hope/Project_package/Tries/trace/src/model.py">
-      <data key="d2">contains</data>
-    </edge>
-    <edge source="/home/hope/Project_package/Tries/trace/src" target="/home/hope/Project_package/Tries/trace/src/train.py">
-      <data key="d2">contains</data>
-    </edge>
-    <edge source="/home/hope/Project_package/Tries/trace/src" target="/home/hope/Project_package/Tries/trace/src/trainer.py">
-      <data key="d2">contains</data>
-    </edge>
-    <edge source="/home/hope/Project_package/Tries/trace/src/__pycache__" target="/home/hope/Project_package/Tries/trace/src/__pycache__/hebbian.cpython-312.pyc">
-      <data key="d2">contains</data>
-    </edge>
-    <edge source="/home/hope/Project_package/Tries/trace/src/__pycache__" target="/home/hope/Project_package/Tries/trace/src/__pycache__/model.cpython-312.pyc">
-      <data key="d2">contains</data>
-    </edge>
-    <edge source="/home/hope/Project_package/Tries/trace/src/__pycache__" target="/home/hope/Project_package/Tries/trace/src/__pycache__/trainer.cpython-312.pyc">
-      <data key="d2">contains</data>
-    </edge>
-    <edge source="/home/hope/Project_package/Tries/trace/src/hebbian.py" target="/home/hope/Project_package/Tries/trace/src/hebbian.py:hebbian_update_linear">
+    <edge source="/home/hope/Project_package/GraphRag-System/llm_processing/answer_generator.py" target="/home/hope/Project_package/GraphRag-System/llm_processing/answer_generator.py:AnswerGenerator">
       <data key="d2">defines</data>
     </edge>
-    <edge source="/home/hope/Project_package/Tries/trace/src/hebbian.py" target="/home/hope/Project_package/Tries/trace/src/hebbian.py:oja_rule">
-      <data key="d2">defines</data>
-    </edge>
-    <edge source="/home/hope/Project_package/Tries/trace/src/hebbian.py" target="/home/hope/Project_package/Tries/trace/src/hebbian.py:update_pc_weights_hebbian">
-      <data key="d2">defines</data>
-    </edge>
-    <edge source="/home/hope/Project_package/Tries/trace/src/model.py" target="/home/hope/Project_package/Tries/trace/src/model.py:PredictiveCodingLayer">
-      <data key="d2">defines</data>
-    </edge>
-    <edge source="/home/hope/Project_package/Tries/trace/src/model.py" target="/home/hope/Project_package/Tries/trace/src/model.py:PredictiveCodingNetwork">
-      <data key="d2">defines</data>
-    </edge>
-    <edge source="/home/hope/Project_package/Tries/trace/src/model.py:PredictiveCodingLayer" target="/home/hope/Project_package/Tries/trace/src/model.py:PredictiveCodingLayer:__init__">
+    <edge source="/home/hope/Project_package/GraphRag-System/llm_processing/answer_generator.py:AnswerGenerator" target="/home/hope/Project_package/GraphRag-System/llm_processing/answer_generator.py:AnswerGenerator:generate_answer">
       <data key="d2">hasMethod</data>
     </edge>
-    <edge source="/home/hope/Project_package/Tries/trace/src/model.py:PredictiveCodingLayer" target="/home/hope/Project_package/Tries/trace/src/model.py:PredictiveCodingLayer:init_state">
-      <data key="d2">hasMethod</data>
-    </edge>
-    <edge source="/home/hope/Project_package/Tries/trace/src/model.py:PredictiveCodingLayer" target="/home/hope/Project_package/Tries/trace/src/model.py:PredictiveCodingLayer:forward">
-      <data key="d2">hasMethod</data>
-    </edge>
-    <edge source="/home/hope/Project_package/Tries/trace/src/model.py:PredictiveCodingLayer" target="/home/hope/Project_package/Tries/trace/src/model.py:PredictiveCodingLayer:update_r">
-      <data key="d2">hasMethod</data>
-    </edge>
-    <edge source="/home/hope/Project_package/Tries/trace/src/model.py:PredictiveCodingLayer" target="/home/hope/Project_package/Tries/trace/src/model.py:PredictiveCodingLayer:get_representation">
-      <data key="d2">hasMethod</data>
-    </edge>
-    <edge source="/home/hope/Project_package/Tries/trace/src/model.py:PredictiveCodingNetwork" target="/home/hope/Project_package/Tries/trace/src/model.py:PredictiveCodingNetwork:__init__">
-      <data key="d2">hasMethod</data>
-    </edge>
-    <edge source="/home/hope/Project_package/Tries/trace/src/model.py:PredictiveCodingNetwork" target="/home/hope/Project_package/Tries/trace/src/model.py:PredictiveCodingNetwork:forward">
-      <data key="d2">hasMethod</data>
-    </edge>
-    <edge source="/home/hope/Project_package/Tries/trace/src/train.py" target="/home/hope/Project_package/Tries/trace/src/train.py:main">
+    <edge source="/home/hope/Project_package/GraphRag-System/llm_processing/query_rewrite.py" target="/home/hope/Project_package/GraphRag-System/llm_processing/query_rewrite.py:QueryRewriter">
       <data key="d2">defines</data>
     </edge>
-    <edge source="/home/hope/Project_package/Tries/trace/src/trainer.py" target="/home/hope/Project_package/Tries/trace/src/trainer.py:train_epoch">
-      <data key="d2">defines</data>
-    </edge>
-    <edge source="/home/hope/Project_package/Tries/trace/src/trainer.py" target="/home/hope/Project_package/Tries/trace/src/trainer.py:validate_epoch">
-      <data key="d2">defines</data>
-    </edge>
-    <edge source="/home/hope/Project_package/Tries/trace/utils" target="/home/hope/Project_package/Tries/trace/utils/__pycache__">
-      <data key="d2">contains</data>
-    </edge>
-    <edge source="/home/hope/Project_package/Tries/trace/utils" target="/home/hope/Project_package/Tries/trace/utils/visualize.py">
-      <data key="d2">contains</data>
-    </edge>
-    <edge source="/home/hope/Project_package/Tries/trace/utils/__pycache__" target="/home/hope/Project_package/Tries/trace/utils/__pycache__/visualize.cpython-312.pyc">
-      <data key="d2">contains</data>
-    </edge>
-    <edge source="/home/hope/Project_package/Tries/trace/utils/visualize.py" target="/home/hope/Project_package/Tries/trace/utils/visualize.py:plot_metrics">
-      <data key="d2">defines</data>
-    </edge>
-    <edge source="/home/hope/Project_package/Tries/trace/utils/visualize.py" target="/home/hope/Project_package/Tries/trace/utils/visualize.py:plot_sample_predictions">
-      <data key="d2">defines</data>
+    <edge source="/home/hope/Project_package/GraphRag-System/llm_processing/query_rewrite.py:QueryRewriter" target="/home/hope/Project_package/GraphRag-System/llm_processing/query_rewrite.py:QueryRewriter:rewrite_query">
+      <data key="d2">hasMethod</data>
     </edge>
   </graph>
 </graphml>
